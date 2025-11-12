@@ -3,9 +3,10 @@ public class Movie {
     int releaseYear;
     boolean isFree;
     double imdbReview;
-    double reviewsSum;
-    int reviewsQuantity;
     int durationInMinutes;
+
+    private double reviewsSum;
+    private int reviewsQuantity;
 
     void displaySpecs() {
         String specs = """
