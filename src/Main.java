@@ -14,11 +14,15 @@ public class Main {
         myMovie.addReview(6);
         myMovie.addReview(10);
 
-        System.out.printf("Média de notas na plataforma: %.2f%n", myMovie.getMeanOfReviews());
-
         // Força nota 10 para o filme (protegido pelo modificador de acesso private)
         // myMovie.reviewsSum = 10;
         // myMovie.reviewsQuantity = 1;
-        //System.out.printf("Média manipulada: %.2f%n", myMovie.getMeanOfReviews());
+        // System.out.printf("Média manipulada: %.2f%n", myMovie.getMeanOfReviews());
+
+        System.out.printf(
+                "Média das %d notas na plataforma: %.2f%n",
+                myMovie.getReviewsQuantity(),
+                myMovie.getMeanOfReviews()
+        );
     }
 }

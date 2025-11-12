@@ -28,4 +28,8 @@ public class Movie {
     double getMeanOfReviews() {
         return reviewsSum / reviewsQuantity;
     }
+
+    public int getReviewsQuantity() {
+        return reviewsQuantity;
+    }
 }
