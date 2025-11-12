@@ -5,11 +5,15 @@ public class Main {
         myMovie.name = "O Senhor dos Anéis: A Sociedade do Anel";
         myMovie.releaseYear = 2002;
         myMovie.durationInMinutes = 171;
-        myMovie.review = 8.9;
+        myMovie.imdbReview = 8.9;
 
-        System.out.printf(
-                "Filme - %s (nota: %.2f)%nLançado em %d com %d minutos de duração",
-                myMovie.name, myMovie.review, myMovie.releaseYear, myMovie.durationInMinutes
-        );
+        myMovie.displaySpecs();
+
+        myMovie.addReview(8);
+        myMovie.addReview(5);
+        myMovie.addReview(6);
+        myMovie.addReview(10);
+
+        System.out.printf("Média de notas na plataforma: %.2f", myMovie.getMeanOfReviews());
     }
 }
