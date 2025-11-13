@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
 
-        myMovie.name = "O Senhor dos Anéis: A Sociedade do Anel";
-        myMovie.releaseYear = 2002;
-        myMovie.durationInMinutes = 171;
-        myMovie.imdbReview = 8.9;
+        myMovie.setName("O Senhor dos Anéis: A Sociedade do Anel");
+        myMovie.setReleaseYear(2002);
+        myMovie.setDurationInMinutes(171);
+        myMovie.setImdbReview(8.9);
 
         myMovie.displaySpecs();
 

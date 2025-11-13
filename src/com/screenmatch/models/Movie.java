@@ -1,12 +1,11 @@
 package com.screenmatch.models;
 
 public class Movie {
-    String name;
-    int releaseYear;
-    boolean isFree;
-    double imdbReview;
-    int durationInMinutes;
-
+    private String name;
+    private int releaseYear;
+    private boolean free;
+    private double imdbReview;
+    private int durationInMinutes;
     private double reviewsSum;
     private int reviewsQuantity;
 
@@ -33,5 +32,41 @@ public class Movie {
 
     public int getReviewsQuantity() {
         return reviewsQuantity;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setDurationInMinutes(int durationInMinutes) {
+        this.durationInMinutes = durationInMinutes;
+    }
+
+    public void setImdbReview(double imdbReview) {
+        this.imdbReview = imdbReview;
+    }
+
+    public void setFree(boolean free) {
+        this.free = free;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    public boolean isFree() {
+        return free;
+    }
+
+    public double getImdbReview() {
+        return imdbReview;
     }
 }
