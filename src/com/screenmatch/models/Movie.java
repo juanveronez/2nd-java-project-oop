@@ -1,3 +1,5 @@
+package com.screenmatch.models;
+
 public class Movie {
     String name;
     int releaseYear;
@@ -8,7 +10,7 @@ public class Movie {
     private double reviewsSum;
     private int reviewsQuantity;
 
-    void displaySpecs() {
+    public void displaySpecs() {
         String specs = """
                         -------- Fixa Técnica do Filme --------
                         %s
@@ -20,12 +22,12 @@ public class Movie {
         System.out.println(specs);
     }
 
-    void addReview(double reviewScore) {
+    public void addReview(double reviewScore) {
         reviewsSum += reviewScore;
         reviewsQuantity++;
     }
 
-    double getMeanOfReviews() {
+    public double getMeanOfReviews() {
         return reviewsSum / reviewsQuantity;
     }
 
