@@ -29,6 +29,8 @@ public class Main {
                 myMovie.getMeanOfReviews()
         );
 
+        System.out.printf("Duração do filme: %d minuto(s)%n", myMovie.getDurationInMinutes());
+
         Series aneisDePoder = new Series();
         aneisDePoder.setName("Os Anéis de Poder");
         aneisDePoder.setSeasons(2);
@@ -39,5 +41,7 @@ public class Main {
 
 
         aneisDePoder.displaySpecs();
+
+        System.out.printf("Tempo médio da série: %d minuto(s)%n", aneisDePoder.getDurationInMinutes());
     }
 }

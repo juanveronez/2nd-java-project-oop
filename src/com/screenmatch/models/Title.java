@@ -69,4 +69,8 @@ public class Title {
     public double getImdbReview() {
         return imdbReview;
     }
+
+    public int getDurationInMinutes() {
+        return durationInMinutes;
+    }
 }
