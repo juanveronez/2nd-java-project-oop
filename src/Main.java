@@ -1,3 +1,4 @@
+import com.screenmatch.metrics.TimeCalculator;
 import com.screenmatch.models.Movie;
 import com.screenmatch.models.Series;
 
@@ -43,5 +44,13 @@ public class Main {
         aneisDePoder.displaySpecs();
 
         System.out.printf("Tempo médio da série: %d minuto(s)%n", aneisDePoder.getDurationInMinutes());
+
+        TimeCalculator timeCalculator = new TimeCalculator();
+
+        timeCalculator.includeTitle(myMovie);
+        timeCalculator.includeTitle(aneisDePoder);
+
+        int totalMinutes = timeCalculator.getTotalMinutes();
+        System.out.println("Tempo total de exibição: " + totalMinutes);
     }
 }
