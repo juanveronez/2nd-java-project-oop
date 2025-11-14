@@ -1,10 +1,12 @@
 import com.screenmatch.models.Movie;
+import com.screenmatch.models.Series;
 
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
 
         myMovie.setName("O Senhor dos Anéis: A Sociedade do Anel");
+        myMovie.setDirector("Peter Jackson");
         myMovie.setReleaseYear(2002);
         myMovie.setDurationInMinutes(171);
         myMovie.setImdbReview(8.9);
@@ -26,5 +28,16 @@ public class Main {
                 myMovie.getReviewsQuantity(),
                 myMovie.getMeanOfReviews()
         );
+
+        Series aneisDePoder = new Series();
+        aneisDePoder.setName("Os Anéis de Poder");
+        aneisDePoder.setSeasons(2);
+        aneisDePoder.setEpisodesPerSeason(8);
+        aneisDePoder.setMinutesPerEpisode(70);
+        aneisDePoder.setReleaseYear(2022);
+        aneisDePoder.setImdbReview(6.9);
+
+
+        aneisDePoder.displaySpecs();
     }
 }
