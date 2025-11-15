@@ -1,4 +1,6 @@
+import com.screenmatch.metrics.RecommendationsFilter;
 import com.screenmatch.metrics.TimeCalculator;
+import com.screenmatch.models.Episode;
 import com.screenmatch.models.Movie;
 import com.screenmatch.models.Series;
 
@@ -52,5 +54,15 @@ public class Main {
 
         int totalMinutes = timeCalculator.getTotalMinutes();
         System.out.println("Tempo total de exibição: " + totalMinutes);
+
+        RecommendationsFilter recommendationsFilter = new RecommendationsFilter();
+        recommendationsFilter.filter(myMovie);
+
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setSeries(aneisDePoder);
+        episode.setVisualizations(30);
+
+        recommendationsFilter.filter(episode);
     }
 }

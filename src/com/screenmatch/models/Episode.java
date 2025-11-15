@@ -1,9 +1,13 @@
 package com.screenmatch.models;
 
-public class Episode {
+import com.screenmatch.metrics.Classifiable;
+
+public class Episode implements Classifiable {
     private int number;
     private String name;
     private Series series;
+
+    private int visualizations;
 
     public int getNumber() {
         return number;
@@ -27,5 +31,22 @@ public class Episode {
 
     public void setSeries(Series series) {
         this.series = series;
+    }
+
+    public int getVisualizations() {
+        return visualizations;
+    }
+
+    public void setVisualizations(int visualizations) {
+        this.visualizations = visualizations;
+    }
+
+    @Override
+    public int getClassification() {
+        if (visualizations > 100) {
+            return 4;
+        }
+
+        return 2;
     }
 }
